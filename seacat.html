@@ -1,197 +1,187 @@
-<div class="2colrow">
-	<div class="col">
-		<h2>SEACAT HERO</h2>
+<div class="container">
+    <div class="hero flex-col">
+      <h2>SEACAT HERO</h2>
 
-		<label>Name:</label><input type="text" name="attr_character_name" />
-		<label>Friends:</label><input type="text" name="attr_friends" />
-		<label>Enemies:</label><input type="text" name="attr_enemies" />
-		<label>Titles:</label><input type="text" name="attr_titles" />
-		<label>Species:</label><input type="text" name="attr_species" />
-		<label>Looks:</label><input type="text" name="attr_looks" />
-		<label>Debt:</label><input type="text" name="attr_debt" />
-		<label>Likes:</label><input type="text" name="attr_likes">
-	</div>
+      <label>Name:</label><input type="text" name="attr_character_name" />
+      <label>Friends:</label><input type="text" name="attr_friends" />
+      <label>Enemies:</label><input type="text" name="attr_enemies" />
+      <label>Titles:</label><input type="text" name="attr_titles" />
+      <label>Species:</label><input type="text" name="attr_species" />
+      <label>Looks:</label><input type="text" name="attr_looks" />
+      <label>Debt:</label><input type="text" name="attr_debt" />
+      <label>Likes:</label><input type="text" name="attr_likes">
+    </div>
+    <div class="pet flex-col">
+      <h2>YOUR PET</h2>
 
-	<div class="col">
-		<h2>YOUR PET</h2>
+      <label>Name:</label><input type="text" name="attr_pet_name" />
+      <label>Defense:</label><input type="text" name="attr_pet_defense" />
+      <label>XP:</label><input type="text" name="attr_pet_xp" />
+      <label>Bonus:</label><input type="text" name="attr_pet_bonus" />
+      <label>Lvl</label><input type="text" name="attr_pet_level" />
+      <label>Life</label><input type="text" name="attr_pet_life" />
+      <label>Ability</label><input type="text" name="attr_pet_ability" />
+    </div>
+    <div class="stats flex-col">
+      <h2>STATS</h2>
+      <label>Strength</label><input type="number" name="attr_strength_max">
+  		<label>Endurance</label><input type="number" name="attr_endurance_max">
+  		<label>Agility</label><input type="number" name="attr_agility_max">
+  		<label>Charisma</label><input type="number" name="attr_charisma_max">
+  		<label>Aura</label><input type="number" name="attr_aura_max">
+  		<label>Thought</label><input type="number" name="attr_thought_max">
+    </div>
+    <div class="skills flex-col">
+      <h2>SKILLS</h2>
 
-		<label>Name:</label><input type="text" name="attr_pet_name" />
-		<label>Defense:</label><input type="text" name="attr_pet_defense" />
-		<label>XP:</label><input type="text" name="attr_pet_xp" />
-		<label>Bonus:</label><input type="text" name="attr_pet_bonus" />
-		<label>Lvl</label><input type="text" name="attr_pet_level" />
-		<label>Life</label><input type="text" name="attr_pet_life" />
-		<label>Ability</label><input type="text" name="attr_pet_ability" />
-	</div>
-</div>
+      <label>0</label><input type="text" name="attr_skill1">
+      <label>0</label><input type="text" name="attr_skill2">
+      <label>0</label><input type="text" name="attr_skill3">
+      <label>1</label><input type="text" name="attr_skill4">
+      <label>3</label><input type="text" name="attr_skill5">
+      <label>5</label><input type="text" name="attr_skill6">
+      <label>7</label><input type="text" name="attr_skill7">
+      <label>X</label><input type="text" name="attr_skill8">
+      <label>X</label><input type="text" name="attr_skill9">
+      <label>X</label><input type="text" name="attr_skill10">
+    </div>
+    <div class="combat flex-col">
+      <h2>COMBAT</h2>
 
-<hr/>
-<div class="4colrow">
-	<div class="col">
-		<h2>STATS</h2>
+      <label>Defense</label><input type="number" name="attr_defense">
+      <label>Close Combat</label><input type="number" name="attr_close_combat">
+      <label>Ranged Combat</label><input type="number" name="attr_ranged_combat">
+      <label>Magic</label><input type="number" name="attr_magic">
+    </div>
+    <div class="abilities flex-col">
+      <h2>ABILITIES</h2>
 
-		<label>Strength</label><input type="number" name="attr_strength_max">
-		<label>Endurance</label><input type="number" name="attr_endurance_max">
-		<label>Agility</label><input type="number" name="attr_agility_max">
-		<label>Charisma</label><input type="number" name="attr_charisma_max">
-		<label>Aura</label><input type="number" name="attr_aura_max">
-		<label>Thought</label><input type="number" name="attr_thought_max">
-	</div>
-	<div class="col">
-		<h2>SKILLS</h2>
+      <label>1</label><input type="text" name="attr_ability1">
+      <label>2</label><input type="text" name="attr_ability2">
+      <label>3</label><input type="text" name="attr_ability3">
+      <label>4</label><input type="text" name="attr_ability4">
+      <label>5</label><input type="text" name="attr_ability5">
+      <label>6</label><input type="text" name="attr_ability6">
+      <label>7</label><input type="text" name="attr_ability7">
+      <label>8</label><input type="text" name="attr_ability8">
+      <label>9</label><input type="text" name="attr_ability9">
+      <label>X</label><input type="text" name="attr_ability10">
+    </div>
+    <div class="inventory flex-col">
+      <h2>INVENTORY</h2>
+      <h3>First Sack of Gear</h3>
+      <h4>2500 cash=100 soaps=10 stones=1 sack</h4>
 
-		<label>0</label><input type="text" name="attr_skill1">
-		<label>0</label><input type="text" name="attr_skill2">
-		<label>0</label><input type="text" name="attr_skill3">
-		<label>1</label><input type="text" name="attr_skill4">
-		<label>3</label><input type="text" name="attr_skill5">
-		<label>5</label><input type="text" name="attr_skill6">
-		<label>7</label><input type="text" name="attr_skill7">
-		<label>X</label><input type="text" name="attr_skill8">
-		<label>X</label><input type="text" name="attr_skill9">
-		<label>X</label><input type="text" name="attr_skill10">
-	</div>
-	<div class="col">
-		<h2>COMBAT</h2>
+      <input type="text" name="attr_inventory1_1">
+      <input type="text" name="attr_inventory1_2">
+      <input type="text" name="attr_inventory1_3">
+      <input type="text" name="attr_inventory1_4">
+      <input type="text" name="attr_inventory1_5">
+      <input type="text" name="attr_inventory1_6">
+      <input type="text" name="attr_inventory1_7">
+      <input type="text" name="attr_inventory1_8">
+      <input type="text" name="attr_inventory1_9">
+      <input type="text" name="attr_inventory1_10">
 
-		<label>Defense</label><input type="number" name="attr_defense">
-		<label>Close Combat</label><input type="text" name="attr_close_combat">
-		<label>Ranged Combat</label><input type="text" name="attr_ranged_combat">
-		<label>Magic</label><input type="text" name="attr_magic">
-	</div>
-	<div class="col">
-		<h2>ABILITIES</h2>
+      <h3>The Cumbersome Second Pack</h3>
+      <h4>slow and at a disadvantage</h4>
 
-		<label>1</label><input type="text" name="attr_ability1">
-		<label>2</label><input type="text" name="attr_ability2">
-		<label>3</label><input type="text" name="attr_ability3">
-		<label>4</label><input type="text" name="attr_ability4">
-		<label>5</label><input type="text" name="attr_ability5">
-		<label>6</label><input type="text" name="attr_ability6">
-		<label>7</label><input type="text" name="attr_ability7">
-		<label>8</label><input type="text" name="attr_ability8">
-		<label>9</label><input type="text" name="attr_ability9">
-		<label>X</label><input type="text" name="attr_ability10">	
-	</div>
-</div>
-<div class="3colrow">
-	<div class="col">
-		<h2>INVENTORY</h2>
-		<h3>First Sack of Gear</h3>
-		<h4>2500 cash=100 soaps=10 stones=1 sack</h4>
+      <input type="text" name="attr_inventory2_1">
+      <input type="text" name="attr_inventory2_2">
+      <input type="text" name="attr_inventory2_3">
+      <input type="text" name="attr_inventory2_4">
+      <input type="text" name="attr_inventory2_5">
+      <input type="text" name="attr_inventory2_6">
+      <input type="text" name="attr_inventory2_7">
+      <input type="text" name="attr_inventory2_8">
+      <input type="text" name="attr_inventory2_9">
+      <input type="text" name="attr_inventory2_10">
+    </div>
+    <div class="heroics flex-col">
+      <h2>HEROICS</h2>
+      <h3>1d6 bonus</h3>
 
-		<input type="text" name="attr_inventory1_1">
-		<input type="text" name="attr_inventory1_2">
-		<input type="text" name="attr_inventory1_3">
-		<input type="text" name="attr_inventory1_4">
-		<input type="text" name="attr_inventory1_5">
-		<input type="text" name="attr_inventory1_6">
-		<input type="text" name="attr_inventory1_7">
-		<input type="text" name="attr_inventory1_8">
-		<input type="text" name="attr_inventory1_9">
-		<input type="text" name="attr_inventory1_10">
+      <input type="button" name="attr_heroic1">
+      <input type="button" name="attr_heroic2">
+      <input type="button" name="attr_heroic3">
+      <input type="button" name="attr_heroic4">
+      <input type="button" name="attr_heroic5">
+      <input type="button" name="attr_heroic6">
+      <input type="button" name="attr_heroic7">
+      <input type="button" name="attr_heroic8">
+      <input type="button" name="attr_heroic9">
+      <input type="button" name="attr_heroic10">
+    </div>
+    <div class="fatigue flex-col">
+      <h2>FATIGUE</h2>
 
-		<h3>The Cumbersome Second Pack</h3>
-		<h4>slow and at a disadvantage</h4>
+  		<input type="button" name="attr_fatigue1">
+  		<input type="button" name="attr_fatigue2">
+  		<input type="button" name="attr_fatigue3">
+  		<input type="button" name="attr_fatigue4">
+  		<input type="button" name="attr_fatigue5">
+  		<input type="button" name="attr_fatigue6">
+    </div>
+    <div class="xp flex-col">
+      <h2>XP</h2>
+      <h3>Experience</h3>
+      <input type="text" name="attr_experience">
+<!--
+      <div class="3colrow">
+        <div class="flex-col">
+          <h4>Level</h4>
+          <label>0</label>
+          <label>1</label>
+          <label>2</label>
+          <label>3</label>
+          <label>4</label>
+          <label>5</label>
+          <label>6</label>
+          <label>7</label>
+          <label>8</label>
+          <label>9</label>
+        </div>
 
-		<input type="text" name="attr_inventory2_1">
-		<input type="text" name="attr_inventory2_2">
-		<input type="text" name="attr_inventory2_3">
-		<input type="text" name="attr_inventory2_4">
-		<input type="text" name="attr_inventory2_5">
-		<input type="text" name="attr_inventory2_6">
-		<input type="text" name="attr_inventory2_7">
-		<input type="text" name="attr_inventory2_8">
-		<input type="text" name="attr_inventory2_9">
-		<input type="text" name="attr_inventory2_10">
-	</div>
+        <div class="flex-col">
+          <h4>Bonus</h4>
+          <label>+1</label>
+          <label>+2</label>
+          <label>+2</label>
+          <label>+2</label>
+          <label>+2</label>
+          <label>+3</label>
+          <label>+3</label>
+          <label>+3</label>
+          <label>+3</label>
+          <label>+4</label>
+        </div>
 
-	<div class="col">
-		<h2>HEROICS</h2>
-		<h3>1d6 bonus</h3>
+        <div class="flex-col">
+          <h4>Life</h4>
+          <label>5</label>
+          <label>8</label>
+          <label>14</label>
+          <label>20</label>
+          <label>26</label>
+          <label>32</label>
+          <label>38</label>
+          <label>40</label>
+          <label>42</label>
+          <label>44</label>
+        </div>
+      </div> -->
+    </div>
+    <div class="mods flex-col">
+      <h2>MODS</h2>
 
-		<input type="button" name="attr_heroic1">
-		<input type="button" name="attr_heroic2">
-		<input type="button" name="attr_heroic3">
-		<input type="button" name="attr_heroic4">
-		<input type="button" name="attr_heroic5">
-		<input type="button" name="attr_heroic6">
-		<input type="button" name="attr_heroic7">
-		<input type="button" name="attr_heroic8">
-		<input type="button" name="attr_heroic9">
-		<input type="button" name="attr_heroic10">
-
-		<h2>FATIGUE</h2>
-
-		<input type="button" name="attr_fatigue1">
-		<input type="button" name="attr_fatigue2">
-		<input type="button" name="attr_fatigue3">
-		<input type="button" name="attr_fatigue4">
-		<input type="button" name="attr_fatigue5">
-		<input type="button" name="attr_fatigue6">
-	</div>
-
-	<div class="col">
-		<h2>XP</h2>
-		<h3>Experience</h3>
-		<input type="text" name="attr_experience">
-
-		<div class="3colrow">
-			<div class="col">
-				<h4>Level</h4>
-				<label>0</label>
-				<label>1</label>
-				<label>2</label>
-				<label>3</label>
-				<label>4</label>
-				<label>5</label>
-				<label>6</label>
-				<label>7</label>
-				<label>8</label>
-				<label>9</label>
-			</div>
-
-			<div class="col">
-				<h4>Bonus</h4>
-				<label>+1</label>
-				<label>+2</label>
-				<label>+2</label>
-				<label>+2</label>
-				<label>+2</label>
-				<label>+3</label>
-				<label>+3</label>
-				<label>+3</label>
-				<label>+3</label>
-				<label>+4</label>
-			</div>
-
-			<div class="col">
-				<h4>Life</h4>
-				<label>5</label>
-				<label>8</label>
-				<label>14</label>
-				<label>20</label>
-				<label>26</label>
-				<label>32</label>
-				<label>38</label>
-				<label>40</label>
-				<label>42</label>
-				<label>44</label>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="col">
-	<h2>MODS</h2>
-
-	<input type="text" name="attr_mods_1">
-	<input type="text" name="attr_mods_2">
-	<input type="text" name="attr_mods_3">
-	<input type="text" name="attr_mods_4">
-	<input type="text" name="attr_mods_5">
-	<input type="text" name="attr_mods_6">
-	<input type="text" name="attr_mods_7">
-	<input type="text" name="attr_mods_8">
-	<input type="text" name="attr_mods_9">
-	<input type="text" name="attr_mods_10">
-</div>
+      <input type="text" name="attr_mods_1">
+      <input type="text" name="attr_mods_2">
+      <input type="text" name="attr_mods_3">
+      <input type="text" name="attr_mods_4">
+      <input type="text" name="attr_mods_5">
+      <input type="text" name="attr_mods_6">
+      <input type="text" name="attr_mods_7">
+      <input type="text" name="attr_mods_8">
+      <input type="text" name="attr_mods_9">
+      <input type="text" name="attr_mods_10">
+    </div>
