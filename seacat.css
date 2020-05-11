@@ -1,66 +1,56 @@
-/* Set the min-width so that when the window is resized the look will stay consistant */
+.sheet-container{
+      display: grid;
+      grid-gap:
+      grid-template-columns: 1fr 1fr 18.4% 1fr;
+      grid-template-rows: 13.4% 6.4% 28.7% 1fr 1fr 11.7%;
+    }
 
-.charsheet {
-	background-color: #ddd;
-	min-width: 800px;
-}
+    .sheet-flex-col{
+      display: flex;
+      flex-direction: column;
+    }
+    .sheet-hero{
+      grid-area: 1 / 1 / 3 / 3;
+      background-color: coral;
+    }
 
-/* Universal styling applied to all elements of these types */
+    .sheet-pet{
+      grid-area: 1 / 3 / 2 / 5;
+    }
 
-h2 {
-	font-size: 2em;
-	margin-bottom: 10px;
-	text-align: center;
-}
+    .sheet-stats{
+      grid-area: 3 / 1 / 4 / 2;
+    }
 
-label {
-	display: inline-block;
-	width: 31%;
-}
+    .sheet-skills{
+      grid-area: 3 / 2 / 4 / 3;
+    }
 
-input {
-	display: inline-block;
-	width: 165px;
-}
+    .sheet-combat{
+      grid-area: 2 / 3 / 4 / 4;
+    }
 
-img {
-	max-height: 100px;
-}
+    .sheet-abilities{
+      grid-area: 3 / 4 / 4 / 5;
+    }
 
-textarea {
-	resize: vertical;
-}
+    .sheet-inventory{
+      grid-area: 4 / 1 / 6 / 3;
+    }
 
-/* Targetted styling that only effects elements with these classes */
-input.sheet-short {
-	width: 17%;
-}
+    .sheet-heroics{
+      grid-area: 4 / 3 / 5 / 4;
+    }
 
-select.sheet-dtype {
-    vertical-align: top;
-    width: 60px;
-}
-span.sheet-dee {
-	font-size: 1.4em;
-	font-weight: bold;
-	left: -36%;
-	padding-right: 4px;
-	position: relative;
-	top: 3px;
-}
+    .sheet-fatigue{
+      grid-area: 5 / 3 / 6 / 4;
+    }
 
-/* Targetted styling that only effects elements contained within the stated class */
-.sheet-stats h3 {
-	display: inline-block;
-	text-align: left;
-}
+    .sheet-xp{
+      grid-area: 4 / 4 / 6 / 5;
+    }
 
-.sheet-stats h3:first-child {
-	margin-left: 35%;
-	margin-right: 15%;
-}
-
-.sheet-stats input {
-	margin-right: 8%;
-	width: 17%;
-}
+    .sheet-mods{
+      grid-area: 6 / 1 / 7 / 5;
+      background-color: coral;
+    }
