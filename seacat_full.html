@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>SEACAT Hero Sheet</title>
 
   <style>
     header {
@@ -16,6 +16,7 @@
 
 
     h3 {
+      margin: 0;
       border-bottom:2px solid purple;
       text-transform: uppercase;
       padding-left: 20px;
@@ -23,6 +24,33 @@
       color: white;
       background-color: purple;
     }
+
+    /* input {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      display:inline-block;
+      vertical-align:middle;
+      margin-left:20px
+    }
+
+    label {
+      display:inline-block;
+      float: left;
+      padding-top: 5px;
+      text-align: left;
+      width: 140px;
+    } */
+
+    /* input[type=number]{
+      width: 55%;
+      padding: 1em;
+    }
+
+    label {
+      display: inline-block;
+      text-align: left;
+      width: 140px;
+    } */
 
     /* h3:after {
       content: '';
@@ -45,8 +73,33 @@
     .container > div{
       display: flex;
       flex-direction: column;
-      padding:1em;
+      /* padding: 0 1em 1em 1em; */
       border:purple 1px solid;
+    }
+
+    .nested{
+      display:grid;
+      grid-template-columns: 1fr 3fr;
+      grid-gap: 1em;
+    }
+
+    .nested > div{
+      display: flex;
+      flex-direction: column;
+      padding: 1em;
+    }
+
+    .nested2{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      grid-auto-rows: 1fr auto;
+      grid-gap: 1em;
+    }
+
+    .nested2 > div{
+      display: flex;
+      flex-direction: column;
+      padding:1em;
     }
 
     .nested3{
@@ -59,7 +112,7 @@
     .nested3 > div{
       display: flex;
       flex-direction: column;
-      padding:1em;
+      /* padding:1em; */
       border:purple 1px solid;
     }
 
@@ -113,15 +166,30 @@
     <div class="hero">
       <h3>SEACAT HERO</h3>
 
-      <label>Name:</label><input type="text" name="attr_character_name" />
-      <label>Friends:</label><input type="text" name="attr_friends" />
-      <label>Enemies:</label><input type="text" name="attr_enemies" />
-      <label>Titles:</label><input type="text" name="attr_titles" />
-      <label>Species:</label><input type="text" name="attr_species" />
-      <label>Looks:</label><input type="text" name="attr_looks" />
-      <label>Debt:</label><input type="text" name="attr_debt" />
-      <label>Likes:</label><input type="text" name="attr_likes">
+      <div class="nested">
+        <div>
+          <label>Name:</label>
+          <label>Friends:</label>
+          <label>Enemies:</label>
+          <label>Titles:</label>
+          <label>Species:</label>
+          <label>Looks:</label>
+          <label>Debt:</label>
+          <label>Likes:</label>
+        </div>
+        <div>
+          <input type="text" name="attr_character_name" />
+          <input type="text" name="attr_friends" />
+          <input type="text" name="attr_enemies" />
+          <input type="text" name="attr_titles" />
+          <input type="text" name="attr_species" />
+          <input type="text" name="attr_looks" />
+          <input type="text" name="attr_debt" />
+          <input type="text" name="attr_likes" />
+        </div>
+      </div>
     </div>
+
     <div class="pet">
       <h3>YOUR PET</h3>
 
@@ -135,12 +203,33 @@
     </div>
     <div class="stats">
       <h3>STATS</h3>
-      <label>Strength</label><input type="number" name="attr_strength_max">
-  		<label>Endurance</label><input type="number" name="attr_endurance_max">
-  		<label>Agility</label><input type="number" name="attr_agility_max">
-  		<label>Charisma</label><input type="number" name="attr_charisma_max">
-  		<label>Aura</label><input type="number" name="attr_aura_max">
-  		<label>Thought</label><input type="number" name="attr_thought_max">
+
+      <div class="nested3">
+        <div>
+          <label>Strength</label>
+      		<label>Endurance</label>
+      		<label>Agility</label>
+      		<label>Charisma</label>
+      		<label>Aura</label>
+      		<label>Thought</label>
+        </div>
+        <div>
+          <input type="number" name="attr_strength_max">
+          <input type="number" name="attr_endurance_max">
+          <input type="number" name="attr_agility_max">
+          <input type="number" name="attr_charisma_max">
+          <input type="number" name="attr_aura_max">
+          <input type="number" name="attr_thought_max">
+        </div>
+        <div>
+          <input type="number" name="attr_strength_current">
+          <input type="number" name="attr_endurance_current">
+          <input type="number" name="attr_agility_current">
+          <input type="number" name="attr_charisma_current">
+          <input type="number" name="attr_aura_current">
+          <input type="number" name="attr_thought_current">
+        </div>
+      </div>
     </div>
     <div class="skills">
       <h3>SKILLS</h3>
@@ -212,16 +301,22 @@
       <h3>HEROICS</h3>
       <h4>1d6 bonus</h4>
 
-      <input type="button" name="attr_heroic1">
-      <input type="button" name="attr_heroic2">
-      <input type="button" name="attr_heroic3">
-      <input type="button" name="attr_heroic4">
-      <input type="button" name="attr_heroic5">
-      <input type="button" name="attr_heroic6">
-      <input type="button" name="attr_heroic7">
-      <input type="button" name="attr_heroic8">
-      <input type="button" name="attr_heroic9">
-      <input type="button" name="attr_heroic10">
+      <div class="nested2">
+        <div>
+          <input type="button" name="attr_heroic1">
+          <input type="button" name="attr_heroic2">
+          <input type="button" name="attr_heroic3">
+          <input type="button" name="attr_heroic4">
+          <input type="button" name="attr_heroic5">
+        </div>
+        <div>
+          <input type="button" name="attr_heroic6">
+          <input type="button" name="attr_heroic7">
+          <input type="button" name="attr_heroic8">
+          <input type="button" name="attr_heroic9">
+          <input type="button" name="attr_heroic10">
+        </div>
+      </div>
     </div>
     <div class="fatigue">
       <h3>FATIGUE</h3>
