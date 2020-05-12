@@ -65,7 +65,7 @@
     .container{
       display: grid;
       grid-template-columns: 1fr 1fr 15% 1fr;
-      grid-template-rows: 20% 25% 1fr 1fr 10%;
+      grid-template-rows: 20% 25% 1fr 1fr auto;
       grid-gap: 1%;
       justify-content: center;
     }
@@ -105,8 +105,7 @@
     .nested3{
       display:grid;
       grid-template-columns: 2fr 1fr 1fr;
-      grid-template-rows: 1fr auto;
-      grid-gap: 1%;
+      grid-gap: 1em;
     }
 
     .nested3 > div{
@@ -141,16 +140,8 @@
     }
 
     .inventory{
-    	display: grid;
       grid-area: 4 / 1 / span 2 / span 2;
     }
-
-		.inventory > div{
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			grid-template-rows: 1fr 1fr;
-			border: purple 1px solid;
-		}
 
 		.inventory1{
 			grid-column: 1 / 2;
@@ -181,6 +172,10 @@
     .xp{
       grid-area: 4 / 4 / 6 / 5;
     }
+
+		.xp1{
+
+		}
 
     .mods{
       grid-area: 6 / 1 / 7 / 5;
@@ -358,6 +353,8 @@
 
     <div class="inventory">
       <h3>INVENTORY</h3>
+
+			<div class="nested2">
 				<div class="inventory1">
 					<input type="text" name="attr_inventory1_1">
 		      <input type="text" name="attr_inventory1_2">
@@ -386,6 +383,7 @@
 					<input type="text" name="attr_inventory2_9">
 					<input type="text" name="attr_inventory2_10">
 				</div>
+			</div>
 			</div>
 
     <div class="heroics">
