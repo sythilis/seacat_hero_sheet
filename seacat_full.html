@@ -7,7 +7,7 @@
   <title>SEACAT Hero Sheet</title>
 
   <style>
-    header {
+		header {
       float: left;
       margin: 0 0 30px 0;
       padding: 5px 0 0 0;
@@ -65,7 +65,7 @@
     .container{
       display: grid;
       grid-template-columns: 1fr 1fr 15% 1fr;
-      grid-template-rows: 20% 25% 1fr 1fr 15%;
+      grid-template-rows: 20% 25% 1fr 1fr 10%;
       grid-gap: 1%;
       justify-content: center;
     }
@@ -99,7 +99,7 @@
     .nested2 > div{
       display: flex;
       flex-direction: column;
-      padding:1em;
+      /* padding:1em; */
     }
 
     .nested3{
@@ -141,8 +141,34 @@
     }
 
     .inventory{
+    	display: grid;
       grid-area: 4 / 1 / span 2 / span 2;
     }
+
+		.inventory > div{
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr 1fr;
+			border: purple 1px solid;
+		}
+
+		.inventory1{
+			grid-column: 1 / 2;
+			grid-row: 4 / 5;
+			grid-area: 4 / 1 / span 1 / span 1;
+		}
+
+		.inventory2{
+			grid-area: 4 / 2 / span 1 / span 1;
+		}
+
+		.inventory3{
+			grid-area: 5 / 1 / span 1 / span 1;
+		}
+
+		.inventory4{
+			grid-area: 5 / 2 / span 1 / span 1;
+		}
 
     .heroics{
       grid-area: 4 / 3 / span 1 / span 1;
@@ -163,6 +189,7 @@
 </head>
 <body>
   <div class="container">
+
     <div class="hero">
       <h3>SEACAT HERO</h3>
 
@@ -193,14 +220,28 @@
     <div class="pet">
       <h3>YOUR PET</h3>
 
-      <label>Name:</label><input type="text" name="attr_pet_name" />
-      <label>Defense:</label><input type="text" name="attr_pet_defense" />
-      <label>XP:</label><input type="text" name="attr_pet_xp" />
-      <label>Bonus:</label><input type="text" name="attr_pet_bonus" />
-      <label>Lvl</label><input type="text" name="attr_pet_level" />
-      <label>Life</label><input type="text" name="attr_pet_life" />
-      <label>Ability</label><input type="text" name="attr_pet_ability" />
+			<div class="nested">
+        <div>
+					<label>Name:</label>
+		      <label>Defense:</label>
+		      <label>XP:</label>
+		      <label>Bonus:</label>
+		      <label>Lvl</label>
+		      <label>Life</label>
+		      <label>Ability</label>
+        </div>
+        <div>
+          <input type="text" name="attr_pet_name" />
+          <input type="text" name="attr_pet_defense" />
+          <input type="text" name="attr_pet_xp" />
+          <input type="text" name="attr_pet_bonus" />
+          <input type="text" name="attr_pet_level" />
+          <input type="text" name="attr_pet_life" />
+          <input type="text" name="attr_pet_ability" />
+        </div>
+      </div>
     </div>
+
     <div class="stats">
       <h3>STATS</h3>
 
@@ -231,72 +272,122 @@
         </div>
       </div>
     </div>
+
     <div class="skills">
       <h3>SKILLS</h3>
 
-      <label>0</label><input type="text" name="attr_skill1">
-      <label>0</label><input type="text" name="attr_skill2">
-      <label>0</label><input type="text" name="attr_skill3">
-      <label>1</label><input type="text" name="attr_skill4">
-      <label>3</label><input type="text" name="attr_skill5">
-      <label>5</label><input type="text" name="attr_skill6">
-      <label>7</label><input type="text" name="attr_skill7">
-      <label>X</label><input type="text" name="attr_skill8">
-      <label>X</label><input type="text" name="attr_skill9">
-      <label>X</label><input type="text" name="attr_skill10">
+			<div class="nested">
+        <div>
+		      <label>0</label>
+		      <label>0</label>
+		      <label>0</label>
+		      <label>1</label>
+		      <label>3</label>
+		      <label>5</label>
+		      <label>7</label>
+		      <label>X</label>
+		      <label>X</label>
+		      <label>X</label>
+        </div>
+        <div>
+          <input type="text" name="attr_skill1">
+          <input type="text" name="attr_skill2">
+          <input type="text" name="attr_skill3">
+          <input type="text" name="attr_skill4">
+          <input type="text" name="attr_skill5">
+          <input type="text" name="attr_skill6">
+          <input type="text" name="attr_skill7">
+					<input type="text" name="attr_skill8">
+					<input type="text" name="attr_skill9">
+					<input type="text" name="attr_skill10">
+        </div>
+      </div>
     </div>
+
     <div class="combat">
       <h3>COMBAT</h3>
 
-      <label>Defense</label><input type="number" name="attr_defense">
-      <label>Close Combat</label><input type="number" name="attr_close_combat">
-      <label>Ranged Combat</label><input type="number" name="attr_ranged_combat">
-      <label>Magic</label><input type="number" name="attr_magic">
+			<div class="nested2">
+				<div>
+					<label>Life</label>
+					<label>Defense</label>
+		      <label>Close Combat</label>
+		      <label>Ranged Combat</label>
+		      <label>Magic</label>
+				</div>
+				<div>
+					<input type="number" name="attr_life"
+					<input type="number" name="attr_defense">
+					<input type="number" name="attr_close_combat">
+					<input type="number" name="attr_ranged_combat">
+					<input type="number" name="attr_magic">
+				</div>
+			</div>
     </div>
+
     <div class="abilities">
       <h3>ABILITIES</h3>
 
-      <label>1</label><input type="text" name="attr_ability1">
-      <label>2</label><input type="text" name="attr_ability2">
-      <label>3</label><input type="text" name="attr_ability3">
-      <label>4</label><input type="text" name="attr_ability4">
-      <label>5</label><input type="text" name="attr_ability5">
-      <label>6</label><input type="text" name="attr_ability6">
-      <label>7</label><input type="text" name="attr_ability7">
-      <label>8</label><input type="text" name="attr_ability8">
-      <label>9</label><input type="text" name="attr_ability9">
-      <label>X</label><input type="text" name="attr_ability10">
+			<div class="nested">
+        <div>
+					<label>1</label>
+					<label>2</label>
+					<label>3</label>
+					<label>4</label>
+					<label>5</label>
+					<label>6</label>
+					<label>7</label>
+					<label>8</label>
+					<label>9</label>
+					<label>X</label>
+        </div>
+        <div>
+        	<input type="text" name="attr_ability1">
+          <input type="text" name="attr_ability2">
+          <input type="text" name="attr_ability3">
+          <input type="text" name="attr_ability4">
+          <input type="text" name="attr_ability5">
+          <input type="text" name="attr_ability6">
+          <input type="text" name="attr_ability7">
+					<input type="text" name="attr_ability8">
+					<input type="text" name="attr_ability9">
+					<input type="text" name="attr_ability10">
+        </div>
+      </div>
     </div>
+
     <div class="inventory">
       <h3>INVENTORY</h3>
-      <h4>FIRST SACK OF GEAR</h4>
-      <h5>2500 cash=100 soaps=10 stones=1 sack</h5>
+				<div class="inventory1">
+					<input type="text" name="attr_inventory1_1">
+		      <input type="text" name="attr_inventory1_2">
+		      <input type="text" name="attr_inventory1_3">
+		      <input type="text" name="attr_inventory1_4">
+		      <input type="text" name="attr_inventory1_5">
+				</div>
+				<div class="inventory2">
+					<input type="text" name="attr_inventory1_6">
+					<input type="text" name="attr_inventory1_7">
+					<input type="text" name="attr_inventory1_8">
+					<input type="text" name="attr_inventory1_9">
+					<input type="text" name="attr_inventory1_10">
+				</div>
+				<div class="inventory3">
+					<input type="text" name="attr_inventory2_1">
+		      <input type="text" name="attr_inventory2_2">
+		      <input type="text" name="attr_inventory2_3">
+		      <input type="text" name="attr_inventory2_4">
+		      <input type="text" name="attr_inventory2_5">
+				</div>
+				<div class="inventory4">
+					<input type="text" name="attr_inventory2_6">
+					<input type="text" name="attr_inventory2_7">
+					<input type="text" name="attr_inventory2_8">
+					<input type="text" name="attr_inventory2_9">
+					<input type="text" name="attr_inventory2_10">
+				</div>
+			</div>
 
-      <input type="text" name="attr_inventory1_1">
-      <input type="text" name="attr_inventory1_2">
-      <input type="text" name="attr_inventory1_3">
-      <input type="text" name="attr_inventory1_4">
-      <input type="text" name="attr_inventory1_5">
-      <input type="text" name="attr_inventory1_6">
-      <input type="text" name="attr_inventory1_7">
-      <input type="text" name="attr_inventory1_8">
-      <input type="text" name="attr_inventory1_9">
-      <input type="text" name="attr_inventory1_10">
-
-      <h4>THE CUMBERSOME SECOND PACK</h4>
-      <h4>slow and at a disadvantage</h4>
-
-      <input type="text" name="attr_inventory2_1">
-      <input type="text" name="attr_inventory2_2">
-      <input type="text" name="attr_inventory2_3">
-      <input type="text" name="attr_inventory2_4">
-      <input type="text" name="attr_inventory2_5">
-      <input type="text" name="attr_inventory2_6">
-      <input type="text" name="attr_inventory2_7">
-      <input type="text" name="attr_inventory2_8">
-      <input type="text" name="attr_inventory2_9">
-      <input type="text" name="attr_inventory2_10">
-    </div>
     <div class="heroics">
       <h3>HEROICS</h3>
       <h4>1d6 bonus</h4>
@@ -318,6 +409,7 @@
         </div>
       </div>
     </div>
+
     <div class="fatigue">
       <h3>FATIGUE</h3>
 
@@ -328,6 +420,7 @@
   		<input type="button" name="attr_fatigue5">
   		<input type="button" name="attr_fatigue6">
     </div>
+
     <div class="xp">
       <h3>XP</h3>
       <h4>EXPERIENCE</h4>
@@ -377,6 +470,7 @@
         </div>
       </div>
     </div>
+
     <div class="mods">
       <h3>MODS</h3>
 
