@@ -7,9 +7,19 @@
   <title>SEACAT Hero Sheet</title>
 
   <style>
-    input {
-      max-width: 100%;
+    /* input, output, textarea, select, button {
+      clear: both;
+      float: right;
+      width: 100%;
     }
+
+    label {
+      float: left;
+      width: 30%;
+      text-align: right;
+      padding: 0.25em 1em 0 0;
+    } */
+
     header {
       float: left;
       margin: 0 0 30px 0;
@@ -29,7 +39,7 @@
 
     .row {
       display: grid;
-      /* grid-gap: 1%; */
+      grid-gap: 1%;
       justify-content: center;
     }
 
@@ -50,9 +60,41 @@
 
     .nested {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
       grid-gap: 1%;
       justify-content: center;
+    }
+
+    .nested > div{
+      display: flex;
+      flex-direction: column;
+      padding: 1em;
+    }
+
+    .nested2 {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-gap: 1%
+      justify-content: center;
+    }
+
+    .nested2 > div{
+      display: flex;
+      flex-direction: column;
+      padding: 1em;
+    }
+
+    .nested3 {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      grid-gap: 1%;
+      justify-content: center;
+    }
+
+    .nested3 > div{
+      display: flex;
+      flex-direction: column;
+      padding: 1em;
     }
   </style>
 </head>
@@ -63,7 +105,7 @@
     <div class="column box hero">
       <h3>SEACAT HERO</h3>
 
-      <div class="">
+      <div class="nested">
         <div>
           <label>Name:</label>
           <label>Friends:</label>
@@ -90,7 +132,7 @@
     <div class="column box pet">
       <h3>YOUR PET</h3>
 
-      <div class="">
+      <div class="nested">
         <div>
           <label>Name:</label>
           <label>Defense:</label>
@@ -119,7 +161,7 @@
     <div class="column box stats">
       <h3>STATS</h3>
 
-      <div class="">
+      <div class="nested2">
         <div>
           <label>Strength</label>
           <label>Endurance</label>
@@ -150,7 +192,7 @@
     <div class="column box skills">
       <h3>SKILLS</h3>
 
-      <div class="">
+      <div class="nested">
         <div>
           <label>0</label>
           <label>0</label>
@@ -181,7 +223,7 @@
     <div class="column box combat">
       <h3>COMBAT</h3>
 
-      <div class="">
+      <div class="nested">
         <div>
           <label>Life</label>
           <label>Defense</label>
@@ -190,7 +232,7 @@
           <label>Magic</label>
         </div>
         <div>
-          <input type="number" name="attr_life"
+          <input type="number" name="attr_life">
           <input type="number" name="attr_defense">
           <input type="number" name="attr_close_combat">
           <input type="number" name="attr_ranged_combat">
@@ -202,7 +244,7 @@
     <div class="column box abilities">
       <h3>ABILITIES</h3>
 
-      <div class="">
+      <div class="nested">
         <div>
           <label>1</label>
           <label>2</label>
@@ -275,7 +317,7 @@
         <h3>HEROICS</h3>
         <h4>1d6 bonus</h4>
 
-        <div class="">
+        <div class="nested">
           <div>
             <input type="button" name="attr_heroic1">
             <input type="button" name="attr_heroic2">
@@ -295,14 +337,23 @@
 
       <div class="box fatigue">
         <h3>FATIGUE</h3>
-
-        <div>
-          <input type="button" name="attr_fatigue1">
-          <input type="button" name="attr_fatigue2">
-          <input type="button" name="attr_fatigue3">
-          <input type="button" name="attr_fatigue4">
-          <input type="button" name="attr_fatigue5">
-          <input type="button" name="attr_fatigue6">
+        <div class="nested">
+          <div>
+            <label>grumpy</label>
+            <label>disadvantage</label>
+            <label>slow</label>
+            <label>half life</label>
+            <label>coma</label>
+            <label>death</label>
+          </div>
+          <div>
+            <input type="button" name="attr_fatigue1">
+            <input type="button" name="attr_fatigue2">
+            <input type="button" name="attr_fatigue3">
+            <input type="button" name="attr_fatigue4">
+            <input type="button" name="attr_fatigue5">
+            <input type="button" name="attr_fatigue6">
+          </div>
         </div>
       </div>
     </div>
@@ -313,7 +364,7 @@
       <h4>EXPERIENCE</h4>
       <input type="text" name="attr_experience">
 
-      <div class="">
+      <div class="nested2">
         <div>
           <h4>LEVEL</h4>
           <label>0 - 0 XP</label>
@@ -363,17 +414,21 @@
   <div class="row d">
     <div class="column box mods">
       <h3>MODS</h3>
-      <div>
-        <input type="text" name="attr_mods_1">
-        <input type="text" name="attr_mods_2">
-        <input type="text" name="attr_mods_3">
-        <input type="text" name="attr_mods_4">
-        <input type="text" name="attr_mods_5">
-        <input type="text" name="attr_mods_6">
-        <input type="text" name="attr_mods_7">
-        <input type="text" name="attr_mods_8">
-        <input type="text" name="attr_mods_9">
-        <input type="text" name="attr_mods_10">
+      <div class="nested">
+        <div>
+          <input type="text" name="attr_mods_1">
+          <input type="text" name="attr_mods_2">
+          <input type="text" name="attr_mods_3">
+          <input type="text" name="attr_mods_4">
+          <input type="text" name="attr_mods_5">
+        </div>
+        <div>
+          <input type="text" name="attr_mods_6">
+          <input type="text" name="attr_mods_7">
+          <input type="text" name="attr_mods_8">
+          <input type="text" name="attr_mods_9">
+          <input type="text" name="attr_mods_10">
+        </div>
       </div>
     </div>
   </div>
