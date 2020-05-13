@@ -7,188 +7,133 @@
   <title>SEACAT Hero Sheet</title>
 
   <style>
+		/* input, output, textarea, select, button {
+		  clear: both;
+		  float: right;
+		  width: auto;
+		} */
+
+		label {
+		  float: left; */
+		  width: auto;
+		  /* text-align: right; */
+		  padding: 0.25em 1em 0 0;
+		}
+
 		header {
-      float: left;
-      margin: 0 0 30px 0;
-      padding: 5px 0 0 0;
-      width: 100%;
-    }
-
-
-    h3 {
-      margin: 0;
-      border-bottom:2px solid purple;
-      text-transform: uppercase;
-      padding-left: 20px;
-      position: relative;
-      color: white;
-      background-color: purple;
-    }
-
-    /* input {
-      margin-top: 5px;
-      margin-bottom: 5px;
-      display:inline-block;
-      vertical-align:middle;
-      margin-left:20px
-    }
-
-    label {
-      display:inline-block;
-      float: left;
-      padding-top: 5px;
-      text-align: left;
-      width: 140px;
-    } */
-
-    /* input[type=number]{
-      width: 55%;
-      padding: 1em;
-    }
-
-    label {
-      display: inline-block;
-      text-align: left;
-      width: 140px;
-    } */
-
-    /* h3:after {
-      content: '';
-      position: absolute;
-      height: 100%;
-      width: 200px;
-      background: black;
-      left: 16px;
-      z-index: -1;
-    } */
-
-    .container{
-      display: grid;
-      grid-template-columns: 1fr 1fr 15% 1fr;
-      grid-template-rows: 20% 25% 1fr 1fr auto;
-      grid-gap: 1%;
-      justify-content: center;
-    }
-
-    .container > div{
-      display: flex;
-      flex-direction: column;
-      /* padding: 0 1em 1em 1em; */
-      border:purple 1px solid;
-    }
-
-    .nested{
-      display:grid;
-      grid-template-columns: 1fr 3fr;
-      grid-gap: 1em;
-    }
-
-    .nested > div{
-      display: flex;
-      flex-direction: column;
-      padding: 1em;
-    }
-
-    .nested2{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      grid-auto-rows: 1fr auto;
-      grid-gap: 1em;
-    }
-
-    .nested2 > div{
-      display: flex;
-      flex-direction: column;
-      /* padding:1em; */
-    }
-
-    .nested3{
-      display:grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      grid-gap: 1em;
-    }
-
-    .nested3 > div{
-      display: flex;
-      flex-direction: column;
-      /* padding:1em; */
-      border:purple 1px solid;
-    }
-
-    .hero{
-      grid-area: 1 / 1 / 2 / 3;
-    }
-
-    .pet{
-      grid-area: 1 / 3 / 2 / 5;
-    }
-
-    .stats{
-      grid-area: 3 / 1 / 4 / 2;
-    }
-
-    .skills{
-      grid-area: 3 / 2 / 4 / 3;
-    }
-
-    .combat{
-      grid-area: 2 / 3 / 4 / 4;
-    }
-
-    .abilities{
-      grid-area: 3 / 4 / 4 / 5;
-    }
-
-    .inventory{
-      grid-area: 4 / 1 / span 2 / span 2;
-    }
-
-		.inventory1{
-			grid-column: 1 / 2;
-			grid-row: 4 / 5;
-			grid-area: 4 / 1 / span 1 / span 1;
+		  float: left;
+		  margin: 0 0 30px 0;
+		  padding: 5px 0 0 0;
+		  width: 100%;
 		}
 
-		.inventory2{
-			grid-area: 4 / 2 / span 1 / span 1;
+		h3 {
+		  margin: 0;
+		  border-bottom:2px solid purple;
+		  text-transform: uppercase;
+		  padding-left: 20px;
+		  position: relative;
+		  color: white;
+		  background-color: purple;
 		}
 
-		.inventory3{
-			grid-area: 5 / 1 / span 1 / span 1;
+		.sheet-row {
+		  display: grid;
+		  grid-gap: 1%;
+		  justify-content: center;
+		}
+		.sheet-main {grid-template-columns: auto auto auto auto;}
+		.sheet-a { grid-template-columns: 1fr 1fr; }
+		.sheet-b { grid-template-columns: 1fr 1fr 1fr 1fr; }
+		.sheet-c { grid-template-columns: 2fr 1fr 1fr; }
+		.sheet-d { grid-template-columns: 1fr; }
+
+		.sheet-box {
+		  margin: 0.25em;
+		  padding: 0;
+		  border:purple 1px solid;
 		}
 
-		.inventory4{
-			grid-area: 5 / 2 / span 1 / span 1;
+		.sheet-box > div {
+		  padding: 0.4em;
 		}
 
-    .heroics{
-      grid-area: 4 / 3 / span 1 / span 1;
-    }
+		.sheet-nested {
+		  display: grid;
+		  grid-template-columns: auto 1fr;
+		  grid-gap: 1%;
+		  justify-content: center;
+		}
 
-    .fatigue{
-      grid-area: 5 / 3 / span 1 / span 1;
-    }
+		.sheet-nested > div{
+		  display: flex;
+		  flex-direction: column;
+		  padding: 1em;
+		}
 
-    .xp{
-      grid-area: 4 / 4 / 6 / 5;
-    }
+		.sheet-nested1 {
+			display: grid;
+		 grid-template-columns: auto auto;
+		 grid-gap: 1%;
+		 justify-content: center;
+	 }
 
-		.xp1{
+	 .sheet-nested1 > div{
+		 display: flex;
+		 flex-direction: column;
+		 padding: 1em;
+	 }
+
+		.sheet-nested2 {
+			display: grid;
+		 	grid-template-columns: 1fr 3fr;
+		 	grid-gap: 1%;
+		 	justify-content: center;
+		}
+
+		.sheet-nested2 > div{
+		  display: flex;
+		  flex-direction: column;
+		  padding: 1em;
+		}
+
+		.sheet-nested3 {
+			display: grid;
+		  grid-template-columns: 2fr 1fr 1fr;
+		  grid-gap: 1%;
+		  justify-content: center;
 
 		}
 
-    .mods{
-      grid-area: 6 / 1 / 7 / 5;
-    }
+		.sheet-nested3 > div{
+		  display: flex;
+		  flex-direction: column;
+		  padding: 1em;
+		}
+
+		.sheet-nested4 {
+		      display: grid;
+		      grid-template-columns: auto auto auto auto;
+		      grid-gap: 1%;
+		      justify-content: center;
+		}
+
+		.sheet-nested4 > div{
+		      display: flex;
+		      flex-direction: column;
+		      padding: 1em;
+		}
   </style>
 </head>
 <body>
-  <div class="container">
+	<div class="sheet-main">
 
-    <div class="hero">
+  <div class="sheet-row sheet-a">
+
+    <div class="sheet-column sheet-box sheet-hero">
       <h3>SEACAT HERO</h3>
 
-      <div class="nested">
+      <div class="sheet-nested">
         <div>
           <label>Name:</label>
           <label>Friends:</label>
@@ -212,18 +157,18 @@
       </div>
     </div>
 
-    <div class="pet">
+    <div class="sheet-column sheet-box sheet-hero">
       <h3>YOUR PET</h3>
 
-			<div class="nested">
+      <div class="sheet-nested">
         <div>
-					<label>Name:</label>
-		      <label>Defense:</label>
-		      <label>XP:</label>
-		      <label>Bonus:</label>
-		      <label>Lvl</label>
-		      <label>Life</label>
-		      <label>Ability</label>
+          <label>Name:</label>
+          <label>Defense:</label>
+          <label>XP:</label>
+          <label>Bonus:</label>
+          <label>Lvl</label>
+          <label>Life</label>
+          <label>Ability</label>
         </div>
         <div>
           <input type="text" name="attr_pet_name" />
@@ -237,17 +182,21 @@
       </div>
     </div>
 
-    <div class="stats">
+  </div>
+
+  <div class="sheet-row sheet-b">
+
+    <div class="sheet-column sheet-box sheet-stats">
       <h3>STATS</h3>
 
-      <div class="nested3">
+      <div class="sheet-nested4">
         <div>
           <label>Strength</label>
-      		<label>Endurance</label>
-      		<label>Agility</label>
-      		<label>Charisma</label>
-      		<label>Aura</label>
-      		<label>Thought</label>
+          <label>Endurance</label>
+          <label>Agility</label>
+          <label>Charisma</label>
+          <label>Aura</label>
+          <label>Thought</label>
         </div>
         <div>
           <input type="number" name="attr_strength_max">
@@ -265,24 +214,32 @@
           <input type="number" name="attr_aura_current">
           <input type="number" name="attr_thought_current">
         </div>
+        <div>
+          <button type="roll" value="/roll 1d20 + @{strength_current}" name="roll_StrengthCheck"></button>
+          <button type="roll" value="/roll 1d20 + @{endurance_current}" name="roll_EnduranceCheck"></button>
+          <button type="roll" value="/roll 1d20 + @{agility_current}" name="roll_AgilityCheck"></button>
+          <button type="roll" value="/roll 1d20 + @{charisma_current}" name="roll_CharismaCheck"></button>
+          <button type="roll" value="/roll 1d20 + @{aura_current}" name="roll_AuraCheck"></button>
+          <button type="roll" value="/roll 1d20 + @{thought_current}" name="roll_ThoughtCheck"></button>
+        </div>
       </div>
     </div>
 
-    <div class="skills">
+    <div class="sheet-column sheet-box sheet-skills">
       <h3>SKILLS</h3>
 
-			<div class="nested">
+      <div class="sheet-nested">
         <div>
-		      <label>0</label>
-		      <label>0</label>
-		      <label>0</label>
-		      <label>1</label>
-		      <label>3</label>
-		      <label>5</label>
-		      <label>7</label>
-		      <label>X</label>
-		      <label>X</label>
-		      <label>X</label>
+          <label>0</label>
+          <label>0</label>
+          <label>0</label>
+          <label>1</label>
+          <label>3</label>
+          <label>5</label>
+          <label>7</label>
+          <label>X</label>
+          <label>X</label>
+          <label>X</label>
         </div>
         <div>
           <input type="text" name="attr_skill1">
@@ -292,139 +249,165 @@
           <input type="text" name="attr_skill5">
           <input type="text" name="attr_skill6">
           <input type="text" name="attr_skill7">
-					<input type="text" name="attr_skill8">
-					<input type="text" name="attr_skill9">
-					<input type="text" name="attr_skill10">
+          <input type="text" name="attr_skill8">
+          <input type="text" name="attr_skill9">
+          <input type="text" name="attr_skill10">
         </div>
       </div>
     </div>
 
-    <div class="combat">
+    <div class="sheet-column sheet-box sheet-combat">
       <h3>COMBAT</h3>
 
-			<div class="nested2">
-				<div>
-					<label>Life</label>
-					<label>Defense</label>
-		      <label>Close Combat</label>
-		      <label>Ranged Combat</label>
-		      <label>Magic</label>
-				</div>
-				<div>
-					<input type="number" name="attr_life"
-					<input type="number" name="attr_defense">
-					<input type="number" name="attr_close_combat">
-					<input type="number" name="attr_ranged_combat">
-					<input type="number" name="attr_magic">
-				</div>
-			</div>
-    </div>
-
-    <div class="abilities">
-      <h3>ABILITIES</h3>
-
-			<div class="nested">
+      <div class="sheet-nested3">
         <div>
-					<label>1</label>
-					<label>2</label>
-					<label>3</label>
-					<label>4</label>
-					<label>5</label>
-					<label>6</label>
-					<label>7</label>
-					<label>8</label>
-					<label>9</label>
-					<label>X</label>
+          <label>Life</label>
+          <label>Defense</label>
+          <label>Close Combat</label>
+          <label>Ranged Combat</label>
+          <label>Magic</label>
         </div>
         <div>
-        	<input type="text" name="attr_ability1">
+          <input type="number" name="attr_life">
+          <input type="number" name="attr_defense">
+          <input type="number" name="attr_close_combat">
+          <input type="number" name="attr_ranged_combat">
+          <input type="number" name="attr_magic">
+        </div>
+				<div>
+					<label>&nbsp;</label>
+					<label>&nbsp;</label>
+          <button type="roll" value="/roll 1d20 + @{agility_current} +" name="roll_AgilityCheck"></button>
+          <button type="roll" value="/roll 1d20 + @{charisma_current}" name="roll_CharismaCheck"></button>
+          <button type="roll" value="/roll 1d20 + @{aura_current}" name="roll_AuraCheck"></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="sheet-column sheet-box sheet-abilities">
+      <h3>ABILITIES</h3>
+
+      <div class="sheet-nested">
+        <div>
+          <label>1</label>
+          <label>2</label>
+          <label>3</label>
+          <label>4</label>
+          <label>5</label>
+          <label>6</label>
+          <label>7</label>
+          <label>8</label>
+          <label>9</label>
+          <label>X</label>
+        </div>
+        <div>
+          <input type="text" name="attr_ability1">
           <input type="text" name="attr_ability2">
           <input type="text" name="attr_ability3">
           <input type="text" name="attr_ability4">
           <input type="text" name="attr_ability5">
           <input type="text" name="attr_ability6">
           <input type="text" name="attr_ability7">
-					<input type="text" name="attr_ability8">
-					<input type="text" name="attr_ability9">
-					<input type="text" name="attr_ability10">
+          <input type="text" name="attr_ability8">
+          <input type="text" name="attr_ability9">
+          <input type="text" name="attr_ability10">
         </div>
       </div>
     </div>
 
-    <div class="inventory">
+  </div>
+
+  <div class="sheet-row sheet-c ">
+
+    <div class="sheet-column sheet-box sheet-inventory">
       <h3>INVENTORY</h3>
 
-			<div class="nested2">
-				<div class="inventory1">
-					<input type="text" name="attr_inventory1_1">
-		      <input type="text" name="attr_inventory1_2">
-		      <input type="text" name="attr_inventory1_3">
-		      <input type="text" name="attr_inventory1_4">
-		      <input type="text" name="attr_inventory1_5">
-				</div>
-				<div class="inventory2">
-					<input type="text" name="attr_inventory1_6">
-					<input type="text" name="attr_inventory1_7">
-					<input type="text" name="attr_inventory1_8">
-					<input type="text" name="attr_inventory1_9">
-					<input type="text" name="attr_inventory1_10">
-				</div>
-				<div class="inventory3">
-					<input type="text" name="attr_inventory2_1">
-		      <input type="text" name="attr_inventory2_2">
-		      <input type="text" name="attr_inventory2_3">
-		      <input type="text" name="attr_inventory2_4">
-		      <input type="text" name="attr_inventory2_5">
-				</div>
-				<div class="inventory4">
-					<input type="text" name="attr_inventory2_6">
-					<input type="text" name="attr_inventory2_7">
-					<input type="text" name="attr_inventory2_8">
-					<input type="text" name="attr_inventory2_9">
-					<input type="text" name="attr_inventory2_10">
-				</div>
-			</div>
-			</div>
-
-    <div class="heroics">
-      <h3>HEROICS</h3>
-      <h4>1d6 bonus</h4>
-
-      <div class="nested2">
-        <div>
-          <input type="button" name="attr_heroic1">
-          <input type="button" name="attr_heroic2">
-          <input type="button" name="attr_heroic3">
-          <input type="button" name="attr_heroic4">
-          <input type="button" name="attr_heroic5">
+      <div class="sheet-nested1">
+        <div class="">
+          <input type="text" name="attr_inventory1_1">
+          <input type="text" name="attr_inventory1_2">
+          <input type="text" name="attr_inventory1_3">
+          <input type="text" name="attr_inventory1_4">
+          <input type="text" name="attr_inventory1_5">
         </div>
-        <div>
-          <input type="button" name="attr_heroic6">
-          <input type="button" name="attr_heroic7">
-          <input type="button" name="attr_heroic8">
-          <input type="button" name="attr_heroic9">
-          <input type="button" name="attr_heroic10">
+        <div class="">
+          <input type="text" name="attr_inventory1_6">
+          <input type="text" name="attr_inventory1_7">
+          <input type="text" name="attr_inventory1_8">
+          <input type="text" name="attr_inventory1_9">
+          <input type="text" name="attr_inventory1_10">
+        </div>
+        <div class="">
+          <input type="text" name="attr_inventory2_1">
+          <input type="text" name="attr_inventory2_2">
+          <input type="text" name="attr_inventory2_3">
+          <input type="text" name="attr_inventory2_4">
+          <input type="text" name="attr_inventory2_5">
+        </div>
+        <div class="">
+          <input type="text" name="attr_inventory2_6">
+          <input type="text" name="attr_inventory2_7">
+          <input type="text" name="attr_inventory2_8">
+          <input type="text" name="attr_inventory2_9">
+          <input type="text" name="attr_inventory2_10">
         </div>
       </div>
     </div>
 
-    <div class="fatigue">
-      <h3>FATIGUE</h3>
+    <div class="sheet-column">
 
-  		<input type="button" name="attr_fatigue1">
-  		<input type="button" name="attr_fatigue2">
-  		<input type="button" name="attr_fatigue3">
-  		<input type="button" name="attr_fatigue4">
-  		<input type="button" name="attr_fatigue5">
-  		<input type="button" name="attr_fatigue6">
+      <div class="sheet-box sheet-heroics">
+        <h3>HEROICS</h3>
+        <h4>1d6 bonus</h4>
+
+        <div class="sheet-nested4">
+          <div>
+            <input type="button" name="attr_heroic1">
+            <input type="button" name="attr_heroic2">
+            <input type="button" name="attr_heroic3">
+            <input type="button" name="attr_heroic4">
+            <input type="button" name="attr_heroic5">
+          </div>
+          <div>
+            <input type="button" name="attr_heroic6">
+            <input type="button" name="attr_heroic7">
+            <input type="button" name="attr_heroic8">
+            <input type="button" name="attr_heroic9">
+            <input type="button" name="attr_heroic10">
+          </div>
+        </div>
+      </div>
+
+      <div class="sheet-box sheet-fatigue">
+        <h3>FATIGUE</h3>
+        <div class="sheet-nested1">
+          <div>
+            <label>grumpy</label>
+            <label>disadvantage</label>
+            <label>slow</label>
+            <label>half life</label>
+            <label>coma</label>
+            <label>death</label>
+          </div>
+          <div>
+            <input type="button" name="attr_fatigue1">
+            <input type="button" name="attr_fatigue2">
+            <input type="button" name="attr_fatigue3">
+            <input type="button" name="attr_fatigue4">
+            <input type="button" name="attr_fatigue5">
+            <input type="button" name="attr_fatigue6">
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="xp">
+
+    <div class="sheet-column sheet-box sheet-xp">
       <h3>XP</h3>
       <h4>EXPERIENCE</h4>
       <input type="text" name="attr_experience">
 
-      <div class="nested3">
+      <div class="sheet-nested3">
         <div>
           <h4>LEVEL</h4>
           <label>0 - 0 XP</label>
@@ -440,7 +423,7 @@
         </div>
 
         <div>
-          <h4>BONUS</h4>
+          <h4>APTITUDE</h4>
           <label>+1</label>
           <label>+2</label>
           <label>+2</label>
@@ -469,19 +452,29 @@
       </div>
     </div>
 
-    <div class="mods">
-      <h3>MODS</h3>
+  </div>
 
-      <input type="text" name="attr_mods_1">
-      <input type="text" name="attr_mods_2">
-      <input type="text" name="attr_mods_3">
-      <input type="text" name="attr_mods_4">
-      <input type="text" name="attr_mods_5">
-      <input type="text" name="attr_mods_6">
-      <input type="text" name="attr_mods_7">
-      <input type="text" name="attr_mods_8">
-      <input type="text" name="attr_mods_9">
-      <input type="text" name="attr_mods_10">
+  <div class="sheet-row sheet-d">
+    <div class="sheet-column sheet-box sheet-mods">
+      <h3>MODS</h3>
+      <div class="sheet-nested">
+        <div>
+          <input type="text" name="attr_mods_1">
+          <input type="text" name="attr_mods_2">
+          <input type="text" name="attr_mods_3">
+          <input type="text" name="attr_mods_4">
+          <input type="text" name="attr_mods_5">
+        </div>
+        <div>
+          <input type="text" name="attr_mods_6">
+          <input type="text" name="attr_mods_7">
+          <input type="text" name="attr_mods_8">
+          <input type="text" name="attr_mods_9">
+          <input type="text" name="attr_mods_10">
+        </div>
+      </div>
     </div>
+  </div>
+</div>
 </body>
 </html>
