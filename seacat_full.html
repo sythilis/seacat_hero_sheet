@@ -112,16 +112,22 @@
 		}
 
 		.sheet-nested4 {
-		      display: grid;
-		      grid-template-columns: auto auto auto auto;
-		      grid-gap: 1%;
-		      justify-content: center;
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-gap: 1%;
+      justify-content: center;
 		}
 
 		.sheet-nested4 > div{
-		      display: flex;
-		      flex-direction: column;
-		      padding: 1em;
+      display: flex;
+      flex-direction: column;
+      padding: 1em;
+      /* display: inline;
+      width: 100px;
+      height: 100px;
+      padding: 5px;
+      border: 1px solid blue;
+      background-color: yellow; */
 		}
   </style>
 </head>
@@ -323,28 +329,28 @@
       <h3>INVENTORY</h3>
 
       <div class="sheet-nested1">
-        <div class="">
+        <div class="sheet-box">
           <input type="text" name="attr_inventory1_1">
           <input type="text" name="attr_inventory1_2">
           <input type="text" name="attr_inventory1_3">
           <input type="text" name="attr_inventory1_4">
           <input type="text" name="attr_inventory1_5">
         </div>
-        <div class="">
+        <div class="sheet-box">
           <input type="text" name="attr_inventory1_6">
           <input type="text" name="attr_inventory1_7">
           <input type="text" name="attr_inventory1_8">
           <input type="text" name="attr_inventory1_9">
           <input type="text" name="attr_inventory1_10">
         </div>
-        <div class="">
+        <div class="sheet-box">
           <input type="text" name="attr_inventory2_1">
           <input type="text" name="attr_inventory2_2">
           <input type="text" name="attr_inventory2_3">
           <input type="text" name="attr_inventory2_4">
           <input type="text" name="attr_inventory2_5">
         </div>
-        <div class="">
+        <div class="sheet-box">
           <input type="text" name="attr_inventory2_6">
           <input type="text" name="attr_inventory2_7">
           <input type="text" name="attr_inventory2_8">
@@ -407,23 +413,36 @@
       <h4>EXPERIENCE</h4>
       <input type="text" name="attr_experience">
 
-      <div class="sheet-nested3">
-        <div>
+      <div class="sheet-nested4" >
+        <div class="sheet-box">
+          <h4>&nbsp;</h4>
+          <input type="checkbox" name="attr_level0">
+          <input type="checkbox" name="attr_level0">
+          <input type="checkbox" name="attr_level0">
+          <input type="checkbox" name="attr_level0">
+          <input type="checkbox" name="attr_level0">
+          <input type="checkbox" name="attr_level0">
+          <input type="checkbox" name="attr_level0">
+          <input type="checkbox" name="attr_level0">
+          <input type="checkbox" name="attr_level0">
+          <input type="checkbox" name="attr_level0">
+        </div>
+        <div class="sheet-box">
           <h4>LEVEL</h4>
-          <label>0 - 0 XP</label>
-          <label>1 - 300 XP</label>
-          <label>2 - 750 XP</label>
-          <label>3 - 1500 XP</label>
-          <label>4 - 3000 XP</label>
-          <label>5 - 6000 XP</label>
-          <label>6 - 12500 XP</label>
-          <label>7 - 25000 XP</label>
-          <label>8 - 50000 XP</label>
-          <label>9 - 99999 XP</label>
+          <label>0 - 0 XP </label>
+          <label>1 - 300 XP </label>
+          <label>2 - 750 XP </label>
+          <label>3 - 1500 XP </label>
+          <label>4 - 3000 XP </label>
+          <label>5 - 6000 XP </label>
+          <label>6 - 12500 XP </label>
+          <label>7 - 25000 XP </label>
+          <label>8 - 50000 XP </label>
+          <label>9 - 99999 XP </label>
         </div>
 
-        <div>
-          <h4>APTITUDE</h4>
+        <div class="sheet-box">
+          <h4>BONUS</h4>
           <label>+1</label>
           <label>+2</label>
           <label>+2</label>
@@ -436,7 +455,7 @@
           <label>+4</label>
         </div>
 
-        <div>
+        <div class="sheet-box">
           <h4>LIFE</h4>
           <label>5</label>
           <label>8</label>
@@ -457,7 +476,7 @@
   <div class="sheet-row sheet-d">
     <div class="sheet-column sheet-box sheet-mods">
       <h3>MODS</h3>
-      <div class="sheet-nested">
+      <div class="sheet-nested1">
         <div>
           <input type="text" name="attr_mods_1">
           <input type="text" name="attr_mods_2">
